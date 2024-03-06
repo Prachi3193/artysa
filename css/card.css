@@ -1,0 +1,325 @@
+.categoryCardItem {
+  width: 190px;
+  height: 254px;
+  background: rgba(211, 211, 211, 0.199);
+  position: absolute;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+#c1 {
+  background-color: black;
+}
+
+#c2 {
+  background-color: blue;
+}
+
+#c3 {
+  background-color: red;
+}
+
+#c4 {
+  background-color: green;
+}
+
+.categoryCard:hover #c1 {
+  transform: translateX(-100px) rotate(-40deg);
+}
+
+.categoryCard:hover #c2 {
+  transform: translateX(-50px) rotate(-30deg);
+}
+
+.categoryCard:hover #c3 {
+  transform: translateX(0) rotate(-20deg);
+}
+
+.categoryCard:hover #c4 {
+  transform: translateX(50px) rotate(-10deg);
+}
+
+#c1:hover {
+  transform: translateX(-150px) rotate(0deg) !important;
+}
+
+#c2:hover {
+  transform: translateX(-100px) rotate(0deg) !important;
+}
+
+#c3:hover {
+  transform: translateX(-50px) rotate(0deg) !important;
+}
+
+#c4:hover {
+  transform: translateX(50px) rotate(0deg) !important;
+}
+
+.categoryCard {
+  display: grid;
+  /* height: 50vmax; */
+  place-items: center;
+}
+
+/* left inner card css  */
+.leftCardInner {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: mediumturquoise;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.leftCardInner::before,
+.leftCardInner::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightblue;
+  transition: all 0.5s;
+}
+
+.leftCardInner::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.leftCardInner::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.leftCardInner:hover::before,
+.leftCardInner:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.leftCardInner:hover:after {
+  content: attr(data-card-name);
+}
+
+.leftCardInner img {
+  border-radius: 15px;
+  width: 220px;
+  height: 320px;
+}
+
+/* left card  */
+.leftCard {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.leftCard .leftCardInnerOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+}
+
+.leftCard .leftCardContent {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  padding: 0 3rem 0 0;
+}
+
+.leftCard .leftCardContent .leftCardContentName {
+  font-size: 3rem;
+}
+
+.leftCard .leftCardContent .leftCardContentDescription {
+  font-size: 1.4rem;
+  color: rgb(50, 50, 50);
+}
+
+.leftCardContentButton {
+  font-size: 1.3rem;
+  position: relative;
+  top: 17%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.leftCardContentButton i {
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+  transition: .3s;
+}
+
+.leftCardContentButton:hover i {
+  transform: rotate(-135deg);
+}
+
+.leftCardContentButton::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: black;
+  bottom: 0;
+  right: -100%;
+  transition: .4s;
+}
+
+.leftCardContentButton:hover::before {
+  right: 0;
+}
+
+
+/* right inner card css  */
+.rightCardInner {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: mediumturquoise;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.rightCardInner::before,
+.rightCardInner::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightblue;
+  transition: all 0.5s;
+}
+
+.rightCardInner::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.rightCardInner::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.rightCardInner:hover::before,
+.rightCardInner:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.rightCardInner:hover:after {
+  content: attr(data-card-name);
+}
+
+.rightCardInner img {
+  border-radius: 15px;
+  width: 220px;
+  height: 320px;
+}
+
+/* Right card  */
+.rightCard {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 3rem;
+}
+
+.rightCard .rightCardInnerOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+}
+
+.rightCard .rightCardContent {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  padding: 0 0 0 6rem;
+}
+
+.rightCard .rightCardContent .rightCardContentName {
+  font-size: 3rem;
+}
+
+.rightCard .rightCardContent .rightCardContentDescription {
+  font-size: 1.4rem;
+  color: rgb(50, 50, 50);
+}
+
+.rightCardContentButton {
+  font-size: 1.3rem;
+  position: relative;
+  top: 17%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.rightCardContentButton i {
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+  transition: .3s;
+}
+
+.rightCardContentButton:hover i {
+  transform: rotate(-135deg);
+}
+
+.rightCardContentButton::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: black;
+  bottom: 0;
+  right: -100%;
+  transition: .4s;
+}
+
+.rightCardContentButton:hover::before {
+  right: 0;
+}

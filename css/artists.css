@@ -1,0 +1,27 @@
+#artists-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 6rem;
+}
+#searchBarOuter{
+    border: 1px solid black;
+    border-radius:10px ;
+    padding: 4px 10px;
+    display: flex;align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#searchBar{
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#artistsSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding-bottom: 4rem;
+}

@@ -1,0 +1,29 @@
+.hero-section{
+    height: 85vh;
+    width: 85vw;
+    display: flex;
+    align-items: center;
+}
+.hero-section div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#welcome{
+    font-size: 3rem;
+}
+#to{
+    font-size: 2rem;
+    position: relative;
+    bottom: 15px;
+    left: 4px;
+}
+#brandName{
+    font-size: 5rem;
+    text-decoration: none;
+    color: #B89535;
+    font-weight: bold;
+    font-family: Dancing script;
+}
